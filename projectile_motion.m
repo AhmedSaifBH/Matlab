@@ -1,7 +1,7 @@
 %----------------------------------------------------------------------
 % Created by Ahmed Saif
 % Instagram: https://www.instagram.com/digital.bh/
-% YouTube: https://www.youtube.com/@AhmedSaif_BH/videos   
+% YouTube: https://www.youtube.com/@AhmedSaif_BH
 %----------------------------------------------------------------------
 clear
 clc
