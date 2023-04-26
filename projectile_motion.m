@@ -1,3 +1,8 @@
+%----------------------------------------------------------------------
+% Created by Ahmed Saif
+% Instagram: https://www.instagram.com/digital.bh/
+% YouTube: https://www.youtube.com/@AhmedSaif_BH/videos   
+%----------------------------------------------------------------------
 clear
 clc
 close all
@@ -7,7 +12,7 @@ ang = 60;               % Initial Angle
 
 Num_of_samples = 100;    % Number of samples
 ball_size = 20;         % Size of the ball in the plot
-%----------------------------------------------
+%----------------------------------------------------------------------
 figure('Position',[100 50 1000 600]);  % create new figure
 
 Vxi = Vi.*cosd(ang);    % initial horizontal velocity
@@ -32,9 +37,10 @@ axis equal              % use same length per unit for x & y axes
 axis([0 max([1.1*mxx mxy]) 0 max([1.5*mxy mxx])]) % set the limit of x & y axes
 ax.NextPlot = 'replaceChildren'; % for next plot, old plotted data is removed without changing figure properties
 
-for i=1:Num_of_samples
-    plot(dx(1:i),dy(1:i),'--O','MarkerIndices',i,'LineWidth',0.5,'MarkerSize',ball_size,'MarkerFaceColor','b');
-    text(0.05,0.9,{['Angle = ' num2str(ang) ' Deg']},'FontSize',16,'Unit','normalized');
+for idx=1:Num_of_samples
+    plot(dx(1:idx),dy(1:idx),'--O','MarkerIndices',idx,'LineWidth',0.5,'MarkerSize',ball_size,'MarkerFaceColor','b');
+    text(0.05,0.85,{['Time(s) = ' num2str(t(idx),'%.2f') ' s']},'FontSize',16,'Unit','normalized');
+    text(0.05,0.9,{['Initial Angle = ' num2str(ang) ' Deg']},'FontSize',16,'Unit','normalized');
     text(0.05,0.95,{['Initial Velocity = ' num2str(Vi) ' m/s']},'FontSize',16,'Unit','normalized');
     xlabel('Distance (m)')
     ylabel('Height (m)')
